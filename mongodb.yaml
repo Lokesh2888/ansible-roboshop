@@ -4,7 +4,7 @@
   tasks:
   - name: cpoy mongo repo
     ansible.builtin.copy:
-      scr : mongo.repo
+      scr: mongo.repo
       dest: /etc/yum.repos.d/mongo.repo
 
   - name: install mongodb
