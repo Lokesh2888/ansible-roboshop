@@ -1,5 +1,5 @@
 - name: configure catalougue component
-  hosts: catalougue
+  hosts: catalogue
   become: yes
   tasks:
   - name: disable default js 
@@ -25,12 +25,12 @@
       path: /app
       state: directory
 
-  - name: download catalougue code 
+  - name: download catalogue code 
     ansible.builtin.get_url:
       url:  https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
       dest: /tmp/catalogue.zip 
 
-  - name: extract catalougue code
+  - name: extract catalogue code
     ansible.builtin.unarchive:
       src: /tmp/catalogue.zip
       dest: /app 
